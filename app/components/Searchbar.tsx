@@ -25,7 +25,7 @@ function Searchbar({}: Props) {
             placeholder="Search Here"
             className="border active:outline-none w-full rounded-full focus:outline-none text-white"
           />
-          <Button className=" text-black" type="submit">Search</Button>
+          <Button className=" text-black bg-foreground shadow   " type="submit">Search</Button>
         </form>
       </div>
     </div>

@@ -11,8 +11,8 @@ type Props = {
 
 function ResultsCard({ title, description, url, favicons }: Props) {
   return (
-    <a target="_blank"  href={url}>
-      <div className="w-full h-40  hover:shadow-lg bg-foreground  duration-300 rounded-2xl flex  my-5 gap-5 flex-col p-5 px-8">
+    <a target="_blank" href={url}>
+      <div className="w-full  hover:shadow-lg hover:bg-foreground  duration-300 rounded-2xl flex  my-2 gap-5 flex-col p-5 px-8">
         <div className="flex items-center space-x-4">
           <img
             src={favicons.high_res}
@@ -22,7 +22,7 @@ function ResultsCard({ title, description, url, favicons }: Props) {
             width={30}
           />
           <div className="flex flex-col gap-0">
-              <h2 className="text-primary font-semibold text-lg">{title}</h2>
+            <h2 className="dark:text-blue-800 text-blue-400 font-semibold text-lg">{title}</h2>
             <a
               href={url}
               target="_blank"

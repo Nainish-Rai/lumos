@@ -25,7 +25,7 @@
     --secondary: rgb(207, 207, 207);
     --secondary-foreground: 222.2 47.4% 11.2%;
  
-    --accent: 210 40% 96.1%;
+    --accent: white;
     --accent-foreground: 222.2 47.4% 11.2%;
  
     --destructive: 0 84.2% 60.2%;
@@ -37,7 +37,7 @@
   }
  
   .dark {
-    --background: #e5e5e5;
+    --background: #ededed;
     --foreground: #f4f4f5;
  
     --muted: 217.2 32.6% 17.5%;
@@ -58,7 +58,7 @@
     --secondary: #111827;
     --secondary-foreground: 210 40% 98%;
  
-    --accent: 217.2 32.6% 17.5%;
+    --accent: white;
     --accent-foreground: 210 40% 98%;
  
     --destructive: 0 62.8% 30.6%;

@@ -19,7 +19,7 @@ module.exports = {
     
     extend: {
       fontSize: {
-        xs:['0.65rem', '0.85rem'],
+        xs:['0.8rem', '1.1rem'],
       },
       colors: {
         border: "var(--border)",

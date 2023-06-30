@@ -34,7 +34,7 @@ export interface KnowledgePanel {
     title:               string;
     description:         string;
     url:                 null;
-    metadata:            Metadatum[];
+    metadata:            Metadata[];
     books:               any[];
     tv_shows_and_movies: any[];
     ratings:             Rating[];
@@ -50,7 +50,7 @@ export interface Image {
     url: string;
 }
 
-export interface Metadatum {
+export interface Metadata {
     title: string;
     value: string;
 }

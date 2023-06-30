@@ -22,11 +22,11 @@ function ImagesFeed({data}: Props) {
       data.map((item: ImageMain, index: number) => {
         return (
           <Dialog key={item.id}>
-            <DialogTrigger className={` w-fit p-1`}>
+            <DialogTrigger className={`p-2 h-[${item.preview.height}px] w-fit`}>
               <img
                 src={item.preview.url}
                 key={item.id}
-                className={`rounded-lg  hover:opacity-70 duration-150 cursor-pointer w-full h-[${item.preview.height}] `}
+                className={`rounded-lg  hover:opacity-70 duration-150 cursor-pointer w-full h-full object-cover] `}
                 width={item.preview.width}
                 height={item.preview.height}
                 alt={item.id}

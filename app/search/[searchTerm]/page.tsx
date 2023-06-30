@@ -6,6 +6,7 @@ import ResultsCard from "@/app/components/ResultsCard";
 import SkeletonSearchPage from "@/app/components/Skeleton/SkeletonSearchPage";
 import { Main, Result } from "@/types";
 import RouteBar from "@/app/containers/RouteBar";
+import SearchFeed from "@/app/containers/SearchFeed";
 
 type Props = {};
 type searchApi = {
@@ -37,23 +38,11 @@ function page({}: Props) {
   if (isLoading) return <SkeletonSearchPage />;
   return (
     <div className="w-full h-screen pt-16">
+      
       <div className="w-full max-w-7xl mx-auto">
+
         <RouteBar searchTerm={searchTerm}/>
-        <div className="text-primary w-[70%]">
-          {data &&
-            data.results.map((item: Result, index: number) => {
-              return (
-                <ResultsCard
-                  key={index}
-                  title={item.title}
-                  url={item.url}
-                  description={item.description}
-                  favicons={item.favicons}
-                />
-              );
-            })}
-            {/* <button className="h-6 w-6 rounded bg-white" onClick={()=>setPage(prev=>prev+1)}>Load More</button> */}
-        </div>
+        <SearchFeed data={data.results} knowledge_panel={data.knowledge_panel} alsoSearch={data.people_also_search}/>
       </div>
     </div>
   );
