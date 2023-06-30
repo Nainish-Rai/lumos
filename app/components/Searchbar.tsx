@@ -14,18 +14,18 @@ function Searchbar({}: Props) {
     router.push(`/search/${searchTerm}`);
   };
   return (
-    <div className="border">
+    <div className=" w-[40%]">
       <div className="flex w-full items-center space-x-2">
-        <form className="flex space-x-2" onSubmit={handleSubmit}>
+        <form className="flex space-x-2 w-full" onSubmit={handleSubmit}>
           <Input
             type="text"
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setSearchTerm(e.target.value)
             }
             placeholder="Search Here"
-            className="border active:outline-none focus:outline-none text-white"
+            className="border active:outline-none w-full rounded-full focus:outline-none text-white"
           />
-          <Button type="submit">Search</Button>
+          <Button className=" text-black" type="submit">Search</Button>
         </form>
       </div>
     </div>

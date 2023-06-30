@@ -6,7 +6,7 @@ type Props = {};
 
 function page({}: Props) {
   return (
-    <div className=" bg-background h-screen w-full">
+    <div className=" bg-background h-screen w-full ">
       <Navbar />
       <div className="w-full h-[94%] flex items-center justify-center">
         <Searchbar/>

@@ -14,8 +14,13 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+      
     },
+    
     extend: {
+      fontSize: {
+        xs:['0.65rem', '0.85rem'],
+      },
       colors: {
         border: "var(--border)",
         input: "var(--input)",
