@@ -13,7 +13,7 @@ type Props = {
 function SearchFeed({ data  ,knowledge_panel ,alsoSearch }: Props) {
   return (
     <div className="flex">
-      <div className="text-primary w-[70%]">
+      <div className="text-primary w-[70%] m-4 rounded-3xl shadow bg-foreground">
         {data &&
           data.map((item: Result, index: number) => {
             return (

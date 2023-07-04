@@ -5,7 +5,7 @@ type Props = {}
 
 function SkeletonSearchPage({}: Props) {
   return (
-    <div className='w-full h-screen -z-30 pt-16 mx-auto max-w-7xl'>
+    <div className='w-full h-screen -z-30 pt-16 mx-auto max-w-6xl'>
         <div className='w-full md:w-[70%]'>
 
         <SkeletonSearchCard/>

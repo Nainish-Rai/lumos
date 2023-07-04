@@ -39,7 +39,7 @@ function page({}: Props) {
   return (
     <div className="w-full h-screen pt-16">
       
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-6xl mx-auto">
 
         <RouteBar searchTerm={searchTerm}/>
         <SearchFeed data={data.results} knowledge_panel={data.knowledge_panel} alsoSearch={data.people_also_search}/>

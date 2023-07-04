@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json());
-const BASE_URL = "https://lumosbackend.onrender.com"
+// const BASE_URL = "https://lumosbackend.onrender.com"
+const BASE_URL = "http://localhost:8080"
 
 export function searchApi(searchTerm,options) {
   const address = `${BASE_URL}/search/${searchTerm}`

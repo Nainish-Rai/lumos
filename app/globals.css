@@ -14,7 +14,7 @@
     --popover-foreground: 222.2 84% 4.9%;
  
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: rgb(39, 39, 39);
  
     --border: 214.3 31.8% 91.4%;
     --input: rgba(255, 255, 255, 0.641);

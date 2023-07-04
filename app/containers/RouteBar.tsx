@@ -10,7 +10,7 @@ function RouteBar({searchTerm}: Props) {
     const router = useRouter()
   return (
     <div>
-        <div className="flex">
+        <div className="flex mx-4">
           <div onClick={()=>router.push(`/images/${searchTerm}`)} className='cursor-pointer'>Images</div>
         </div>
     </div>
