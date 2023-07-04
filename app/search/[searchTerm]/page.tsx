@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import {useState,useEffect} from "react"
+import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { searchApi } from "../../../utils/api";
 import ResultsCard from "@/app/components/ResultsCard";
@@ -10,18 +11,16 @@ import SearchFeed from "@/app/containers/SearchFeed";
 
 type Props = {};
 type searchApi = {
-    data: Main;
-    isError: boolean;
-    isLoading: boolean;
-  
+  data: Main;
+  isError: boolean;
+  isLoading: boolean;
 };
 
 function page({}: Props) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { searchTerm } = useParams();
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [page,setPage] = useState<number>(0);
-  console.log(page)
+  const [page, setPage] = useState<number>(0);
   const options = {
     page: page,
     safe: false,
@@ -38,11 +37,13 @@ function page({}: Props) {
   if (isLoading) return <SkeletonSearchPage />;
   return (
     <div className="w-full h-screen pt-16">
-      
       <div className="w-full max-w-6xl mx-auto">
-
-        <RouteBar searchTerm={searchTerm}/>
-        <SearchFeed data={data.results} knowledge_panel={data.knowledge_panel} alsoSearch={data.people_also_search}/>
+        <RouteBar searchTerm={searchTerm} />
+        <SearchFeed
+          data={data.results}
+          knowledge_panel={data.knowledge_panel}
+          alsoSearch={data.people_also_search}
+        />
       </div>
     </div>
   );

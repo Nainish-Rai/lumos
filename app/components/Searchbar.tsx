@@ -23,9 +23,14 @@ function Searchbar({}: Props) {
               setSearchTerm(e.target.value)
             }
             placeholder="Search Here"
-            className="border active:outline-none w-full rounded-full focus:outline-none text-white"
+            className="border active:outline-none w-full rounded-full focus:outline-none dark:text-black text-white"
           />
-          <Button className=" text-black bg-foreground shadow   " type="submit">Search</Button>
+          <Button
+            className=" text-white dark:text-black bg-foreground shadow   "
+            type="submit"
+          >
+            Search
+          </Button>
         </form>
       </div>
     </div>
