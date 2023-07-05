@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-'use client'
+"use client";
 import { PeopleAlsoSearch } from "@/types";
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -9,15 +9,21 @@ type Props = {
 };
 
 function AlsoSearch({ data }: Props) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="p-4">
-      <div className="border dark:shadow-md p-4 rounded-xl dark:bg-foreground border-gray-200/20 ">
-        <h4 className=" font-medium" >People Also Search For</h4>
+      <div className=" bg-gray-100 shadow-md p-4 rounded-3xl dark:bg-zinc-900  ">
+        <h4 className=" font-medium">People Also Search For</h4>
         <div className=" flex mt-2">
           {data.map((item: PeopleAlsoSearch, index: number) => {
             return (
-              <div key={index} onClick={()=>{router.push(`/search/${item.title}`)}} className="w-1/4 cursor-pointer">
+              <div
+                key={index}
+                onClick={() => {
+                  router.push(`/search/${item.title}`);
+                }}
+                className="w-1/4 cursor-pointer"
+              >
                 <div className="w-full p-1">
                   <img
                     src={item.thumbnail}

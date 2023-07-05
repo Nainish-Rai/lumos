@@ -3,7 +3,7 @@
 import { ImageMain, Main, Result } from "@/types";
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import { imagesApi } from "../../../utils/api";
+import { imagesApi } from "../../../../utils/api";
 import ResultsCard from "@/app/components/ResultsCard";
 import SkeletonSearchPage from "@/app/components/Skeleton/SkeletonSearchPage";
 import ImagesFeed from "@/app/containers/ImagesFeed";
@@ -23,9 +23,9 @@ function page({}: Props) {
   if (isError) return "An error has occurred.";
   if (isLoading) return <SkeletonSearchPage />;
   return (
-    <div className="w-full h-screen pt-16">
-      <div className="w-full max-w-7xl mx-auto">
-       <ImagesFeed data={data}/>
+    <div className="w-full h-screen ">
+      <div className="w-full px-5  mx-auto">
+        <ImagesFeed data={data} />
       </div>
     </div>
   );

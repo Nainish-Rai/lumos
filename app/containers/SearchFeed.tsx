@@ -15,7 +15,7 @@ type Props = NewType;
 function SearchFeed({ data, knowledge_panel, alsoSearch }: Props) {
   return (
     <div className="flex">
-      <div className="text-primary w-[70%] m-4 rounded-3xl shadow bg-foreground">
+      <div className="text-primary w-[70%] m-4 rounded-3xl shadow-md bg-gray-100 dark:bg-zinc-900">
         {data &&
           data.map((item: Result, index: number) => {
             return (

@@ -27,8 +27,8 @@ function Navbar({}: Props) {
       className={` ${
         colorChange
           ? "h-16 border-b-0"
-          : "h-fit  border-b border-b-white/20 p-2 shadow-lg bg-foreground"
-      } duration-300 fixed z-30 w-full top-0  bg-background`}
+          : "h-fit  border-b border-b-white/20 p-2 bg-background shadow-lg"
+      } duration-300 fixed z-30 w-full top-0  `}
     >
       <div className="flex justify-between h-full items-center mx-auto px-5 w-full max-w-6xl">
         {!(path == "/") ? <Searchbar /> : null}

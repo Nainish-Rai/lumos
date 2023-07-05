@@ -2,7 +2,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { searchApi } from "../../../utils/api";
+import { searchApi } from "../../../../utils/api";
 import ResultsCard from "@/app/components/ResultsCard";
 import SkeletonSearchPage from "@/app/components/Skeleton/SkeletonSearchPage";
 import { Main, Result } from "@/types";
@@ -36,9 +36,8 @@ function page({}: Props) {
   if (isError) return "An error has occurred.";
   if (isLoading) return <SkeletonSearchPage />;
   return (
-    <div className="w-full h-screen pt-16">
+    <div className="w-full">
       <div className="w-full max-w-6xl mx-auto">
-        <RouteBar searchTerm={searchTerm} />
         <SearchFeed
           data={data.results}
           knowledge_panel={data.knowledge_panel}

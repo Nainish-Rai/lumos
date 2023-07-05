@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -8,10 +8,16 @@ type Props = {};
 
 function Searchbar({}: Props) {
   const router = useRouter();
+  const pathname = usePathname();
+  console.log(pathname);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    router.push(`/search/${searchTerm}`);
+    if (pathname.includes("images")) {
+      router.push(`/feed/images/${searchTerm}`);
+    } else {
+      router.push(`/feed/search/${searchTerm}`);
+    }
   };
   return (
     <div className=" w-[40%]">
@@ -23,12 +29,9 @@ function Searchbar({}: Props) {
               setSearchTerm(e.target.value)
             }
             placeholder="Search Here"
-            className="border active:outline-none w-full rounded-full focus:outline-none dark:text-black text-white"
+            className="border active:outline-none w-full rounded-full focus:outline-none "
           />
-          <Button
-            className=" text-white dark:text-black bg-foreground shadow   "
-            type="submit"
-          >
+          <Button className="shadow" type="submit">
             Search
           </Button>
         </form>
