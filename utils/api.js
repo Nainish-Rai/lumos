@@ -2,8 +2,9 @@
 import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 // const BASE_URL = "https://lumosbackend.onrender.com"
-const BASE_URL = "http://localhost:3000/api";
-
+// const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = process.env.API_BASE_URL;
+console.log(BASE_URL);
 export function searchApi(searchTerm, options) {
   const address = `${BASE_URL}/search/${searchTerm}`;
   const { data, error, isLoading } = useSWR(address, fetcher, {
