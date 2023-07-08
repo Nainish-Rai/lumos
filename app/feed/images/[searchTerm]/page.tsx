@@ -23,7 +23,7 @@ function page({}: Props) {
   if (isError) return "An error has occurred.";
   if (isLoading) return <SkeletonSearchPage />;
   return (
-    <div className="w-full h-screen ">
+    <div className="w-full ">
       <div className="w-full px-5  mx-auto">
         <ImagesFeed data={data} />
       </div>

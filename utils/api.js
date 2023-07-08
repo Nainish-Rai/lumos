@@ -1,42 +1,45 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import useSWR from 'swr'
+import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 // const BASE_URL = "https://lumosbackend.onrender.com"
-const BASE_URL = "http://localhost:8080"
+const BASE_URL = "http://localhost:3000/api";
 
-export function searchApi(searchTerm,options) {
-  const address = `${BASE_URL}/search/${searchTerm}`
+export function searchApi(searchTerm, options) {
+  const address = `${BASE_URL}/search/${searchTerm}`;
   const { data, error, isLoading } = useSWR(address, fetcher, {
-    revalidateOnFocus: false
-  }  )
+    revalidateOnFocus: false,
+  });
 
   async () => {
     const newOptions = {
       page: options.page,
       safe: false,
       additional_params: {
-        hl: 'en'
-      }
+        hl: "en",
+      },
     };
-    await fetcher(address, { 
+    await fetcher(address, {
       method: "GET",
       body: JSON.stringify(newOptions),
     });
     mutate(address);
   };
- 
+
   return {
     data: data,
     isLoading,
-    isError: error
-  }
+    isError: error,
+  };
 }
 
-export function imagesApi(searchTerm){
-  const { data, error, isLoading } = useSWR(`${BASE_URL}/images/${searchTerm}`, fetcher )
+export function imagesApi(searchTerm) {
+  const { data, error, isLoading } = useSWR(
+    `${BASE_URL}/images/${searchTerm}`,
+    fetcher
+  );
   return {
     data: data,
     isLoading,
-    isError: error
-  }
+    isError: error,
+  };
 }

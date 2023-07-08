@@ -20,9 +20,9 @@ function AlsoSearch({ data }: Props) {
               <div
                 key={index}
                 onClick={() => {
-                  router.push(`/search/${item.title}`);
+                  router.push(`/feed/search/${item.title}`);
                 }}
-                className="w-1/4 cursor-pointer"
+                className="w-1/4 hover:opacity-70 cursor-pointer"
               >
                 <div className="w-full p-1">
                   <img

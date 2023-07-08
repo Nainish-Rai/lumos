@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 
 type Props = {};
 
-function Searchbar({}: Props) {
+function HomeSearchBar({}: Props) {
   const router = useRouter();
   const pathname = usePathname();
   console.log(pathname);
@@ -29,10 +29,10 @@ function Searchbar({}: Props) {
               setSearchTerm(e.target.value)
             }
             placeholder="Search Here"
-            className="active:outline-none w-full shadow-md px-4 font-medium dark:bg-black dark:focus:border-white duration-200 rounded-full focus:outline-none "
+            className="active:outline-none duration-150 dark:focus:border-white w-full dark:bg-black shadow-md px-4 p-6 text-lg font-medium  rounded-full focus:outline-none "
           />
           <Button
-            className="shadow-md bg-white rounded-full border  text-gray-950 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-black dark:bg-black dark:hover:border-white  "
+            className="shadow-md bg-white rounded-full border p-6 text-gray-950 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-black dark:bg-black dark:hover:border-white   font-medium "
             type="submit"
           >
             Search
@@ -43,4 +43,4 @@ function Searchbar({}: Props) {
   );
 }
 
-export default Searchbar;
+export default HomeSearchBar;
